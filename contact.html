@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Hemanth Sri Ram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <!-- Animated Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">HSR</a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="page-section contact-page">
+        <div class="section-header animate-up">
+            <p class="section-tag">Get In Touch</p>
+            <h1 class="section-title">Let's Build Something Great</h1>
+            <p class="section-description">
+                I'm actively seeking full-stack developer opportunities. Let's connect and discuss how I can contribute to your team.
+            </p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper animate-up">
+                <h2>Send a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">Sending...</span>
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-wrapper animate-up">
+                <h2>Contact Information</h2>
+                
+                <div class="availability-badge">
+                    <span class="status-dot"></span>
+                    Seeking Full-Stack Roles
+                </div>
+
+                <div class="contact-info-list">
+                    <div class="contact-info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="/cdn-cgi/l/email-protection#640c0109050a100c060b060605565052240309050d084a070b09"><span class="__cf_email__" data-cfemail="650d0008040b110d070a070704575153250208040c094b060a08">[email&#160;protected]</span></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">💼</div>
+                        <div class="info-content">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/hemanth-sri-ram-bobba/" target="_blank">linkedin.com/in/hemanth-sri-ram-bobba</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">💻</div>
+                        <div class="info-content">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/hemanthbobba24" target="_blank">github.com/hemanthbobba24</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <a href="tel:+919132678666">+91 9132678666</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-item">💻</div>
+            <div class="float-item">☁️</div>
+            <div class="float-item">⚛️</div>
+            <div class="float-item">☕</div>
+            <div class="float-item">🚀</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Hemanth Sri Ram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <!-- Animated Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">HSR</a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="page-section">
+        <div class="section-header animate-up">
+            <p class="section-tag">Featured Work</p>
+            <h1 class="section-title">Projects</h1>
+            <p class="section-description">Building production-ready applications with modern technologies</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card animate-up">
+                <div class="project-header">
+                    <span class="project-icon">🛋️</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Cloud Furniture</h3>
+                    <p class="project-description">
+                        A role-driven e-commerce platform enabling sellers, administrators, and users to manage listings, approvals, and orders through secure workflows and intuitive dashboards.
+                    </p>
+                    <div class="project-features">
+                        <span>✓ Real-time inventory</span>
+                        <span>✓ Payment processing</span>
+                        <span>✓ Role-based access</span>
+                        <span>✓ Admin dashboard</span>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java 21</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hemanthbobba24/cloud-furniture" class="project-link" target="_blank">View Code →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card animate-up">
+                <div class="project-header" style="background: linear-gradient(135deg, #10b981, #0891b2);">
+                    <span class="project-icon">🍽️</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Cloud Meals</h3>
+                    <p class="project-description">
+                        Serverless food ordering platform integrating React frontend with AWS Lambda microservices, AI-powered food recognition, role-based authentication, and scalable cloud-native backend architecture.
+                    </p>
+                    <div class="project-features">
+                        <span>✓ Serverless architecture</span>
+                        <span>✓ Real-time tracking</span>
+                        <span>✓ Auto-scaling</span>
+                        <span>✓ Cost-optimized</span>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">API Gateway</span>
+                        <span class="tech-tag">DynamoDB</span>
+                        <span class="tech-tag">S3</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="http://cloudmeals-app.s3-website.us-east-2.amazonaws.com" class="project-link" target="_blank">Live Demo →</a>
+                        <a href="https://github.com/hemanthbobba24/CloudMeals" class="project-link" target="_blank">View Code →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card animate-up">
+                <div class="project-header" style="background: linear-gradient(135deg, #0891b2, #2563eb);">
+                    <span class="project-icon">⚡</span>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Open Source Contributions</h3>
+                    <p class="project-description">
+                        Contributed to open-source educational and React projects by implementing user features, improving validation and UI flows, fixing bugs, and collaborating through documented GitHub pull requests.
+                    </p>
+                    <div class="project-features">
+                        <span>✓ Numbas platform</span>
+                        <span>✓ IssueFlow</span>
+                        <span>✓ Quizz-App</span>
+                        <span>✓ Community impact</span>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hemanthbobba24/Numbas" class="project-link" target="_blank">Numbas →</a>
+                        <a href="https://github.com/hemanthbobba24/IssueFlow" class="project-link" target="_blank">IssueFlow →</a>
+                        <a href="https://github.com/hemanthbobba24/Quizz-App-Frontend" class="project-link" target="_blank">Quizz-App →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-item">💻</div>
+            <div class="float-item">☁️</div>
+            <div class="float-item">⚛️</div>
+            <div class="float-item">☕</div>
+            <div class="float-item">🚀</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
