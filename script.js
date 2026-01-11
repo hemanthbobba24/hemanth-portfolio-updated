@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add page load animation
     const transition = document.querySelector('.page-transition');
     
-    // Animate in on page load
-    setTimeout(() => {
-        transition.classList.add('active');
+    // Check if we arrived via back/forward navigation
+    const navigationType = performance.getEntriesByType('navigation')[0]?.type;
+    const isBackForward = navigationType === 'back_forward';
+    
+    // If back/forward navigation, skip the transition animation
+    if (isBackForward) {
+        transition.classList.remove('active');
+        document.body.classList.remove('page-transitioning');
+    } else {
+        // Animate in on page load (for normal navigation)
         setTimeout(() => {
-            transition.classList.remove('active');
+            transition.classList.add('active');
+            setTimeout(() => {
+                transition.classList.remove('active');
+            }, 100);
         }, 100);
-    }, 100);
+    }
 
     // Handle all internal links
     const links = document.querySelectorAll('a[href^="index.html"], a[href^="about.html"], a[href^="projects.html"], a[href^="skills.html"], a[href^="experience.html"], a[href^="contact.html"]');
@@ -29,6 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 600);
         });
     });
+});
+
+// Handle browser back/forward buttons
+window.addEventListener('pageshow', (event) => {
+    // If page is being restored from cache (back/forward navigation)
+    if (event.persisted) {
+        const transition = document.querySelector('.page-transition');
+        transition.classList.remove('active');
+        document.body.classList.remove('page-transitioning');
+    }
 });
 
 // ===== NAVBAR SCROLL EFFECT =====
