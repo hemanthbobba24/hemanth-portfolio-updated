@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Handle all internal links
-    const links = document.querySelectorAll('a[href^="index.html"], a[href^="about.html"], a[href^="projects.html"], a[href^="skills.html"], a[href^="experience.html"], a[href^="contact.html"]');
+    const links = document.querySelectorAll('a[href^="index.html"], a[href^="about.html"], a[href^="projects.html"], a[href^="skills.html"], a[href^="education.html"], a[href^="whatibring.html"], a[href^="contact.html"]');
     
     links.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -189,7 +189,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements that need scroll animations (except those with animate-up class)
-const animateElements = document.querySelectorAll('.project-card, .skill-card, .timeline-item, .highlight-card');
+const animateElements = document.querySelectorAll('.project-card, .skill-card, .timeline-item, .highlight-card, .bring-card');
 animateElements.forEach(el => {
     if (!el.classList.contains('animate-up')) {
         el.style.opacity = '0';
