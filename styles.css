@@ -113,7 +113,7 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -123,6 +123,7 @@ nav.scrolled {
     transition: color 0.3s ease;
     font-weight: 500;
     position: relative;
+    font-size: 0.95rem;
 }
 
 .nav-links a::after {
@@ -209,6 +210,7 @@ nav.scrolled {
     color: var(--gray);
     margin-bottom: 1.5rem;
     font-weight: 600;
+    min-height: 1.3em;
 }
 
 .hero-description {
@@ -251,6 +253,27 @@ nav.scrolled {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* ===== TYPEWRITER ANIMATION ===== */
+.typewriter-wrapper {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 300;
+    animation: blink 0.7s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* ===== FLOATING ELEMENTS ===== */
@@ -673,7 +696,7 @@ nav.scrolled {
     margin-top: 0.5rem;
 }
 
-/* ===== EXPERIENCE PAGE ===== */
+/* ===== EXPERIENCE / EDUCATION PAGE ===== */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -752,6 +775,92 @@ nav.scrolled {
 
 .timeline-description li {
     margin-bottom: 0.5rem;
+}
+
+/* ===== WHAT I BRING PAGE ===== */
+.bring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.bring-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.bring-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.2);
+}
+
+.bring-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.bring-card-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: rgba(37, 99, 235, 0.08);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.bring-card:hover .bring-card-number {
+    color: rgba(37, 99, 235, 0.15);
+}
+
+.bring-card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 0.75rem;
+}
+
+.bring-card-text {
+    color: var(--gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.bring-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(37, 99, 235, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-radius: 12px;
+}
+
+.bring-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bring-cta p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -956,67 +1065,16 @@ nav.scrolled {
     .about-highlights {
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: rgba(15, 23, 42, 0.98);
-        flex-direction: column;
-        padding: 2rem;
-        gap: 1rem;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .hero-stats {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .projects-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ===== COMPREHENSIVE MOBILE RESPONSIVE ===== */
-@media (max-width: 968px) {
-    .about-content,
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-    }
 
     .about-image {
         width: 250px;
         height: 250px;
         font-size: 6rem;
         margin: 0 auto;
+    }
+
+    .bring-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1226,7 +1284,7 @@ nav.scrolled {
         font-size: 0.9rem;
     }
 
-    /* Experience Page */
+    /* Education Page */
     .timeline {
         padding-left: 1.5rem;
     }
@@ -1265,6 +1323,39 @@ nav.scrolled {
 
     .timeline-description li {
         margin-bottom: 0.5rem;
+    }
+
+    /* What I Bring Page */
+    .bring-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bring-card {
+        padding: 1.5rem;
+    }
+
+    .bring-card-number {
+        font-size: 2.5rem;
+    }
+
+    .bring-card-title {
+        font-size: 1.15rem;
+    }
+
+    .bring-card-text {
+        font-size: 0.9rem;
+    }
+
+    .bring-cta {
+        padding: 2rem 1.5rem;
+    }
+
+    .bring-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .bring-cta p {
+        font-size: 0.95rem;
     }
 
     /* Contact Page */
