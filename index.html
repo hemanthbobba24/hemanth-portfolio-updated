@@ -27,7 +27,8 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
-                <li><a href="experience.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="whatibring.html">What I Bring</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -38,23 +39,26 @@
         <div class="hero-content">
             <p class="hero-label animate-up">Full-Stack Developer</p>
             <h1 class="hero-title animate-up">Hemanth Sri Ram</h1>
-            <h2 class="hero-subtitle animate-up">Building Scalable Cloud Solutions</h2>
+            <h2 class="hero-subtitle animate-up">
+                <span class="typewriter-wrapper" id="typewriter"></span>
+                <span class="typewriter-cursor">|</span>
+            </h2>
             <p class="hero-description animate-up">
                 AWS-certified developer specializing in <strong>Java Spring Boot</strong> and <strong>React</strong>. 
-                Transforming complex technical challenges into elegant, high-performance applications with 3+ years of professional experience.
+                Transforming complex technical challenges into elegant, high-performance applications.
             </p>
             <div class="hero-stats animate-up">
                 <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">15+</span>
+                    <span class="stat-number" id="projectCounter">0+</span>
                     <span class="stat-label">Projects</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">AWS</span>
                     <span class="stat-label">Certified</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">MS</span>
+                    <span class="stat-label">Computer Science</span>
                 </div>
             </div>
             <div class="hero-buttons animate-up">
@@ -74,5 +78,104 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+    // ===== TYPEWRITER EFFECT =====
+    (function() {
+        const phrases = [
+            'Building Scalable Cloud Solutions',
+            'Writing Clean, Maintainable Code',
+            'Designing Robust Backend Systems'
+        ];
+        const el = document.getElementById('typewriter');
+        if (!el) return;
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typeSpeed = 120;
+        const deleteSpeed = 60;
+        const pauseAfterType = 2500;
+        const pauseAfterDelete = 600;
+
+        function tick() {
+            const current = phrases[phraseIndex];
+
+            if (!isDeleting) {
+                // Typing
+                el.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === current.length) {
+                    // Done typing, pause then start deleting
+                    isDeleting = true;
+                    setTimeout(tick, pauseAfterType);
+                    return;
+                }
+                setTimeout(tick, typeSpeed);
+            } else {
+                // Deleting
+                el.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    // Done deleting, move to next phrase
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(tick, pauseAfterDelete);
+                    return;
+                }
+                setTimeout(tick, deleteSpeed);
+            }
+        }
+
+        // Start after a small delay
+        setTimeout(tick, 800);
+    })();
+
+    // ===== COUNTER ANIMATION =====
+    (function() {
+        const counterEl = document.getElementById('projectCounter');
+        if (!counterEl) return;
+
+        const target = 15;
+        const duration = 4000;
+        let hasRun = false;
+
+        function animateCounter() {
+            if (hasRun) return;
+            hasRun = true;
+
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = Math.round(eased * target);
+
+                counterEl.textContent = value + '+';
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Use IntersectionObserver to trigger when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(counterEl);
+    })();
+    </script>
 </body>
 </html>
