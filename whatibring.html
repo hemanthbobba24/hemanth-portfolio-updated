@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What I Bring | Hemanth Sri Ram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page Transition Overlay -->
+    <div class="page-transition"></div>
+
+    <!-- Animated Grid Background -->
+    <div class="grid-background"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">HSR</a>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="whatibring.html" class="active">What I Bring</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- What I Bring Section -->
+    <section class="page-section">
+        <div class="section-header animate-up">
+            <p class="section-tag">Why Work With Me</p>
+            <h1 class="section-title">What I Bring to the Table</h1>
+            <p class="section-description">More than just code — here's the value I deliver</p>
+        </div>
+
+        <div class="bring-grid">
+            <!-- Card 1 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent"></div>
+                <div class="bring-card-number">01</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Full-Stack Ownership</h3>
+                    <p class="bring-card-text">
+                        I build features end-to-end — from designing RESTful APIs with Spring Boot to crafting responsive React interfaces. I don't just hand off work; I own the full lifecycle from development through testing to deployment.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent" style="background: linear-gradient(135deg, #10b981, #0891b2);"></div>
+                <div class="bring-card-number">02</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Cloud-Native Thinking</h3>
+                    <p class="bring-card-text">
+                        As an AWS Certified Solutions Architect, I design with scalability and cost-efficiency in mind. From serverless Lambda functions to containerized Docker deployments, I architect for the cloud from day one.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent" style="background: linear-gradient(135deg, #f59e0b, #ef4444);"></div>
+                <div class="bring-card-number">03</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Clean, Maintainable Code</h3>
+                    <p class="bring-card-text">
+                        I write code that my future teammates will thank me for. Consistent naming, thoughtful abstractions, comprehensive testing with JUnit, and clear documentation are non-negotiables in my workflow.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);"></div>
+                <div class="bring-card-number">04</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Open Source Contributor</h3>
+                    <p class="bring-card-text">
+                        I actively contribute to open-source projects like Numbas, IssueFlow, and Quizz-App. I understand collaborative workflows — pull requests, code reviews, community guidelines — and I thrive in team environments.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent" style="background: linear-gradient(135deg, #0891b2, #2563eb);"></div>
+                <div class="bring-card-number">05</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Security-First Mindset</h3>
+                    <p class="bring-card-text">
+                        From role-based access control and JWT authentication to input validation and secure API design, I build applications with security baked in — not bolted on as an afterthought.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bring-card animate-up">
+                <div class="bring-card-accent" style="background: linear-gradient(135deg, #10b981, #2563eb);"></div>
+                <div class="bring-card-number">06</div>
+                <div class="bring-card-content">
+                    <h3 class="bring-card-title">Rapid Learner & Adapter</h3>
+                    <p class="bring-card-text">
+                        From mastering new frameworks to tackling unfamiliar domains, I pick things up fast. My transition from frontend-focused work to full-stack cloud development demonstrates my ability to grow and adapt quickly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bring-cta animate-up">
+            <h2>Ready to build something great together?</h2>
+            <p>I'm actively looking for Java Backend and Full-Stack Engineer roles where I can make an immediate impact.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-secondary">See My Projects</a>
+                <a href="contact.html" class="btn btn-primary">Let's Connect</a>
+            </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-item">💻</div>
+            <div class="float-item">☁️</div>
+            <div class="float-item">⚛️</div>
+            <div class="float-item">☕</div>
+            <div class="float-item">🚀</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
